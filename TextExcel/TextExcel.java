@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 // Update this file with your own code.
 
-public class TextExcel
+public class TextExcel 
 {
 
     public static void main(String[] args)
     {
         Grid sheet = new Spreadsheet();
+        
 
         System.out.println(sheet.getGridText());
 

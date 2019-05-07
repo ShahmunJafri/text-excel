@@ -1,9 +1,10 @@
- 
 
-//*******************************************************
-//DO NOT MODIFY THIS FILE!!!
-//*******************************************************
-
+/**
+ * Write a description of class Grid here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
 public interface Grid 
 {
 	// Grid interface, must be implemented by your Spreadsheet class
@@ -13,3 +14,4 @@ public interface Grid
 	Cell getCell(Location loc); // returns cell at loc
 	String getGridText(); // returns entire grid, formatted as text for display
 }
+

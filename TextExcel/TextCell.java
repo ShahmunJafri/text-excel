@@ -10,18 +10,19 @@ public class TextCell implements Cell
     private String text;
     public TextCell(String text)
     {
-        this.text = text;
+        this.text = text.substring(1, text.length()-1);
         
     }
 
     public String abbreviatedCellText(){
         if(text.length() > 10){
-            return text.substring(0, 9) + "\"";
+            return text.substring(0, 10);
         }
        
-        return text;
+        return text+"          ".substring(0,10);
     }// text for spreadsheet cell display, must be exactly length 10
     public String fullCellText(){
-       return text; 
+       
+       return "\"" + text + "\""; 
     }
 }

@@ -29,7 +29,7 @@ public class Spreadsheet implements Grid
             }
             return this.getGridText();
         }
-        else if(command.toLowerCase().contains("clear") && command.length() >= 8){
+        else if(command.toLowerCase().contains("clear") && command.length() >= 8 && !command.contains("=")){
             String clear = "clear ";
             SpreadsheetLocation loc = new SpreadsheetLocation(command.substring(command.toLowerCase().indexOf(clear) + clear.length(), command.length()));
             cell[loc.getRow()][loc.getCol()] = new EmptyCell();
@@ -105,7 +105,7 @@ public class Spreadsheet implements Grid
                     }
                 }
                 
-                spreadSheet += cell[rows][col].abbreviatedCellText()+ space + "|" + "";
+                spreadSheet += cell[rows][col].abbreviatedCellText()+ space + "|";
                
             }
             spreadSheet += '\n';

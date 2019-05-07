@@ -235,8 +235,8 @@ public class A_Checkpoint2
                 for (int row = 5; row < 20; row += 10)
                 {
                     String cellName = Character.toString((char)('A' + col)) + (row + 1);
-                    helper.setItem(row,  col, specialStrings[col]);
-                    String sheet = grid.processCommand(cellName + " = \"" + specialStrings[col] + "\"");
+                 helper.setItem(row,  col, specialStrings[col]);
+              String sheet = grid.processCommand(cellName + " = \"" + specialStrings[col] + "\"");
                     assertEquals("grid after setting cell " + cellName, helper.getText(), sheet);
                     String inspected = grid.getCell(new TestsALL.TestLocation(row, col)).fullCellText();
                     assertEquals("inspected cell " + cellName, "\"" + specialStrings[col] + "\"", inspected);

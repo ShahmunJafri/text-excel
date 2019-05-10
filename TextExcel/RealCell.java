@@ -20,9 +20,20 @@ public class RealCell implements Cell
     }
 
     public String abbreviatedCellText(){
-        return null;
+        if(input.length()>10){
+            return input.substring(0,10);
+        }
+        
+        String space = "";
+        for(int i = input.length(); i < 10; i++){
+            space += " ";
+        }
+        return input + space;
     }// text for spreadsheet cell display, must be exactly length 10
     public String fullCellText(){
        return input; 
+    }
+    public double getDoubleValue(){
+        return Double.parseDouble(input);
     }
 }

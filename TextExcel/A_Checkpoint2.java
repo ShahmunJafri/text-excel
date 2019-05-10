@@ -118,7 +118,7 @@ public class A_Checkpoint2
         String accessorOne = grid.getGridText();
         assertEquals("grid from accessor with one string cell", helper.getText(), accessorOne);
         String gridTwo = grid.processCommand("L20 = \"TWo\"");
-        helper.setItem(19, 11, "Two");
+        helper.setItem(19, 11, "TWo");
         assertEquals("grid from accessor with two string cells", helper.getText(), gridTwo);
         String gridOnlyTwo = grid.processCommand("clear A1");
         helper.setItem(0, 0, "");

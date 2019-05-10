@@ -19,7 +19,12 @@ public class TextCell implements Cell
             return text.substring(0, 10);
         }
        
-        return text+"          ".substring(0,10);
+        String space = "";
+        for(int i = text.length(); i < 10; i++){
+            space += " ";
+        
+        }
+        return text + space;
     }// text for spreadsheet cell display, must be exactly length 10
     public String fullCellText(){
        
